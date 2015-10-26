@@ -10,12 +10,19 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      }
+      },
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      SAILS_LOG_LEVEL: 'debug',
+ emberDataSails:  {
+   // default is to use same host and port as the ember app:
+   //host: '//localhost:1337',
+   // this is the default and is the path to the sails io script:
+   //scriptPath: '/js/dependencies/sails.io.js'
+ }
     }
   };
 
