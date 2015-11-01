@@ -1,8 +1,7 @@
 import DS from 'ember-data';
+import BaseModel from './base';
 
-export default DS.Model.extend({
+export default BaseModel.extend({
   text: DS.attr('string'),
-  status: DS.attr('string'),
-  createdAt: DS.attr('date'),
-  updateddAt: DS.attr('date')
+  status: DS.attr('string')
 });
