@@ -1,0 +1,5 @@
+<h3>Registration <small>Create an account now =)</small></h3>
+{{#em-form model=credentials action="register"}}
+    {{em-input property="email" label="Email" placeholder="Enter your email..."}}
+    {{em-input property="password" label="Password" placeholder="And password..." type="password" disabled=nameHasValue}}
+{{/em-form}}

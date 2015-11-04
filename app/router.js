@@ -27,8 +27,14 @@ Router.map(function() {
     this.route('permissions', function() {
       this.route('index');
     });
+    this.route('permission', {path: 'permission/:permission_id'}, function() {
+      this.route('edit');
+    });
   });
 
+  this.route('user', function() {
+    this.route('register');
+  });
 });
 
 export default Router;

@@ -1,0 +1,39 @@
+<h4>Permissions > #{{model.id}} {{model.name}} > Edit</h4>
+<div class="well">
+  {{#em-form model=model action="update"}}
+  <div class="form-group">
+    <label>ID</label>
+    <h5>{{model.id}}</h5>
+  </div>
+  {{em-select
+            label="Model"
+            property="model"
+            content=modelOptions
+            optionValuePath="content.id"
+            optionLabelPath="content.label"
+            prompt=model.model.name}}
+            {{em-select
+                      label="Role"
+                      property="role"
+                      content=roleOptions
+                      optionValuePath="content.id"
+                      optionLabelPath="content.name"
+                      prompt=model.role.name}}
+                      {{em-select
+                                label="Relation"
+                                property="relation"
+                                content=relationOptions
+                                optionValuePath="content.relation"
+                                optionLabelPath="content.relation"
+                                prompt=model.relation}}
+      {{em-select
+                label="Action"
+                property="action"
+                content=actionOptions
+                optionValuePath="content.action"
+                optionLabelPath="content.action"
+                prompt=model.action}}
+  {{/em-form}}
+  Created at: {{createdAt}} <br>
+  Updates at: {{updatedAt}}
+</div>

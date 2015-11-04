@@ -1,0 +1,26 @@
+<h4>Permissions > #{{model.id}} {{model.name}}</h4>
+<div class="well">
+  {{#link-to 'admin.permission.edit' model}}EDIT{{/link-to}}
+  <div class="form-group">
+    <label>ID</label>
+    <h5>{{model.id}}</h5>
+  </div>
+  <div class="form-group">
+    <label>Model</label>
+    <h5>{{model.model.name}}</h5>
+  </div>
+  <div class="form-group">
+    <label>Role</label>
+    <h5>{{model.role.name}}</h5>
+  </div>
+  <div class="form-group">
+    <label>Relation</label>
+    <h5>{{model.relation}}</h5>
+  </div>
+  <div class="form-group">
+    <label>Action</label>
+    <h5>{{model.action}}</h5>
+  </div>
+  Created at: {{createdAt}} <br>
+  Updates at: {{updatedAt}}
+</div>

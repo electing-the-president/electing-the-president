@@ -3,11 +3,13 @@
 <div class="menu">
   {{#link-to 'questions.index'}}Questions{{/link-to}}
   {{#link-to 'users.index'}}Users{{/link-to}}
+  |
   {{#if session.isAuthenticated}}
     {{#link-to 'admin.models.index'}}Models{{/link-to}}
     <a {{action 'invalidateSession'}}>Logout</a>
   {{else}}
     {{#link-to 'login'}}Login{{/link-to}}
+    {{#link-to 'user.register'}}Register{{/link-to}}
   {{/if}}
 </div>
 <div class="main">
