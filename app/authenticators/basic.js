@@ -62,8 +62,12 @@ export default BaseAuthenticator.extend({
 
      console.log(window.btoa(data.identity + ':' + data.password));
      var serverTokenEndpoint = this.get('serverTokenEndpoint');
+     $.ajaxSetup({
+    headers: { 'Authorization': 'Basic ' + window.btoa(data.identity + ':' + data.password) }
+});
      Ember.$.ajax({
        url:      serverTokenEndpoint,
+       type: 'GET',
        beforeSend: function(xhr) {
          xhr.setRequestHeader('Authorization', 'Basic ' + window.btoa(data.identity + ':' + data.password));
        }
