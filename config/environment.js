@@ -49,7 +49,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiEndPoint = 'http://localhost:1337';
+    ENV.apiEndPoint = 'https://electing-the-president.mybluemix.net';
   }
 
   return ENV;
