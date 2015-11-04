@@ -1,8 +1,9 @@
 import Ember from 'ember';
 import BaseAuthenticator from 'ember-simple-auth/authenticators/base';
+import ENV from 'electing-the-president/config/environment';
 
 export default BaseAuthenticator.extend({
-  serverTokenEndpoint: 'http://localhost:1337/user',
+  serverTokenEndpoint: ENV.apiEndPoint + '/user',
   /**
     Restores the session from a session data object. __This method is invoked
     by the session either on application startup if session data is restored
