@@ -5,6 +5,6 @@ export default Ember.Route.extend({
     controller.set('model', model);
   },
   model: function(){
-    return this.store.find('question');
+    return {};//this.store.find('question');
   }
 });

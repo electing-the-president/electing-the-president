@@ -1,2 +1,30 @@
-<h4>Submitted Questions</h4>
-{{outlet}}
+<h3>Ask a question: {{question}}</h3>
+{{input value=question id="name" insert-newline="insertNewline"}}
+<button type="button" id="q_submit_button" {{action 'submitQuestion'}}>Submit</button>
+{{#if loading}}
+<div class="spinner">
+<div class="bounce1"></div>
+<div class="bounce2"></div>
+<div class="bounce3"></div>
+</div>
+{{/if}}
+{{#if watsonResponse}}
+  <h4>Answers</h4>
+  {{#each watsonResponse.question.answers}}
+    <h5>
+      <b>id:</b> {{id}}<br>
+      <b>text:</b> {{text}}<br>
+      <b>pipeline:</b> {{pipeline}}<br>
+      <b>confidence:</b> {{confidence}}
+    </h5>
+  {{/each}}
+  <h4>Evidence</h4>
+  {{#each watsonResponse.question.evidencelist}}
+    <h5>
+      <b>id:</b> {{id}}<br>
+      <b>title:</b> {{title}}<br>
+      <b>text:</b> {{text}}<br>
+      <b>value:</b> {{value}}
+    </h5>
+  {{/each}}
+{{/if}}
