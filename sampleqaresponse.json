@@ -1,0 +1,417 @@
+{
+    "question": {
+        "qclasslist": [
+            {
+                "value": "DESCRIPTIVE"
+            },
+            {
+                "value": "FOCUSLESS"
+            },
+            {
+                "value": "DEFINITION"
+            }
+        ],
+        "evidencelist": [
+            {
+                "value": "0.27706652879714966",
+                "text": "*NOTE: Questions 1-98 are included consecutively in tracks 1-98. Track 99 contains the questions and answers for both question 99 and 100.",
+                "id": "PB_8E4A4D1DF1032D9E1317241FD5630CE8",
+                "title": "M 638 red : Learn About the United States : English Test : Learn About the United States Quick Civics Lessons for the Naturalization Test Audio CD : 100 Questions and Answers for the Naturalization Test*",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_8E4A4D1DF1032D9E1317241FD5630CE8/310/4552",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "M-638_red.pdf",
+                    "title": "M 638 red : Learn About the United States : English Test : Learn About the United States Quick Civics Lessons for the Naturalization Test Audio CD : 100 Questions and Answers for the Naturalization Test*",
+                    "corpusName": "PB",
+                    "deepqaid": "33567787",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567787.xml",
+                    "DOCNO": "8E4A4D1DF1032D9E1317241FD5630CE8"
+                }
+            },
+            {},
+            {
+                "value": "0.020021289587020874",
+                "text": "IMPORTANT NOTE: On the naturalization test, some answers may change because of elections or appointments. As you study for the test, make sure that you know the most current answers to these questions. Answer these questions with the name of the official who is serving at the time of your eligibility interview with USCIS. The USCIS Officer will not accept an incorrect answer.",
+                "id": "PB_8E4A4D1DF1032D9E3CDC9DA2D8DE0E78",
+                "title": "M 638 red : Learn About the United States : Learn About the United States: Quick Civics Lessons : More Resources to Help You Study",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_8E4A4D1DF1032D9E3CDC9DA2D8DE0E78/2214/2592",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "M-638_red.pdf",
+                    "title": "M 638 red : Learn About the United States : Learn About the United States: Quick Civics Lessons : More Resources to Help You Study",
+                    "corpusName": "PB",
+                    "deepqaid": "33567474",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567474.xml",
+                    "DOCNO": "8E4A4D1DF1032D9E3CDC9DA2D8DE0E78"
+                }
+            },
+            {
+                "value": "0.016954144462943077",
+                "text": "There are 100 civics (history and government) questions on the naturalization test. During your naturalization interview, you will be asked up to 10 questions from the list of 100 questions. You must answer correctly six (6) of the 10 questions to pass the civics test. Applicants who are age 65 or older and have been a permanent resident for at least 20 years at the time of filing the Form N-400, Application for Naturalization, are only required to study 20 of the 100 civics test questions for the naturalization test. These questions are flagged with an asterisk (*) in this booklet.",
+                "id": "PB_8E4A4D1DF1032D9E96C004673E6DCBCC",
+                "title": "M 638 red : Learn About the United States : Learn About the United States: Quick Civics Lessons",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_8E4A4D1DF1032D9E96C004673E6DCBCC/578/1167",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "M-638_red.pdf",
+                    "title": "M 638 red : Learn About the United States : Learn About the United States: Quick Civics Lessons",
+                    "corpusName": "PB",
+                    "deepqaid": "33567473",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567473.xml",
+                    "DOCNO": "8E4A4D1DF1032D9E96C004673E6DCBCC"
+                }
+            },
+            {
+                "value": "0.015120109543204308",
+                "text": "Use this CD as you prepare for the civics portion of the naturalization test. After you become familiar with the content, shuffle or randomly play the questions in your CD player or computer to help test your knowledge. The audio CD has 99 individual tracks. Questions 1-98 are included consecutively in tracks 1-98 and track 99 contains the questions and answers for both question 99 and 100.",
+                "id": "PB_8E4A4D1DF1032D9E73BC2686D1B1660C",
+                "title": "M 638 red : Learn About the United States : English Test : U.S. Government Official Edition Notice",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_8E4A4D1DF1032D9E73BC2686D1B1660C/1923/2316",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "M-638_red.pdf",
+                    "title": "M 638 red : Learn About the United States : English Test : U.S. Government Official Edition Notice",
+                    "corpusName": "PB",
+                    "deepqaid": "33567786",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567786.xml",
+                    "DOCNO": "8E4A4D1DF1032D9E73BC2686D1B1660C"
+                }
+            },
+            {
+                "value": "0.01297111064195633",
+                "text": "Cruz's father instilled his son with the notion that \"When I was in Cuba and they took away our freedoms, I had a place to go. If we lose our freedoms here, where are we going to go?\" That question is one that drives much of Cruz's belief system today. Those who've known Cruz since he was young are quick to point out that he has been consistent in espousing the same values and philosophies today that he spent so much time talking about in his younger days.",
+                "id": "PB_D38CD14A0B8593C9DEDC26EF50214AF",
+                "title": "TedCruz OtherInformation : BIOGRAPHY",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_D38CD14A0B8593C9DEDC26EF50214AF/778/1238",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "TedCruz-OtherInformation.docx",
+                    "author": "Rose Dawson",
+                    "title": "TedCruz OtherInformation : BIOGRAPHY",
+                    "corpusName": "PB",
+                    "deepqaid": "33560863",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33560863.xml",
+                    "DOCNO": "D38CD14A0B8593C9DEDC26EF50214AF"
+                }
+            },
+            {
+                "value": "0.0129045145586133",
+                "text": "But there are two sides to a story.\" During a Reddit Ask Me Anything (AMA) session, Sanders noted the injustice of regular people being penalized for drug use while wealthier members of society often get away with similar offenses, \"There is no question but that the rich and powerful live under a different system of justice than ordinary Americans. If you are a Wall Street executive who engaged in reckless and illegal behavior which helped crash the economy leading to massive unemployment and human suffering, your bank may have to pay a fine but nothing happens to you.",
+                "id": "PB_1D13EA6F18518ACF79B42791911FA7C9",
+                "title": "ATTN Bernie Sanders : 2. Marijuana",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_1D13EA6F18518ACF79B42791911FA7C9/1438/2013",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "ATTN Bernie Sanders.docx",
+                    "author": "Hunter Crossett",
+                    "title": "ATTN Bernie Sanders : 2. Marijuana",
+                    "corpusName": "PB",
+                    "deepqaid": "33560204",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33560204.xml",
+                    "DOCNO": "1D13EA6F18518ACF79B42791911FA7C9"
+                }
+            },
+            {
+                "value": "0.012479196302592754",
+                "text": "medical impairment as determined by an approved Form N-648, Medical Certification for Disability Exceptions. Speaking Portion Your ability to speak English will be determined by the USCIS Officer from your answers to questions normally asked during the eligibility interview on the Form N-400, Application for Naturalization. Reading Portion Each reading test administered to you will contain no more than three (3) sentences.",
+                "id": "PB_8E4A4D1DF1032D9ECF7B011C1C2A7E1C",
+                "title": "M 638 red : Learn About the United States : English Test",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_8E4A4D1DF1032D9ECF7B011C1C2A7E1C/1102/1528",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "M-638_red.pdf",
+                    "title": "M 638 red : Learn About the United States : English Test",
+                    "corpusName": "PB",
+                    "deepqaid": "33567647",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567647.xml",
+                    "DOCNO": "8E4A4D1DF1032D9ECF7B011C1C2A7E1C"
+                }
+            },
+            {
+                "value": "0.011433555744588375",
+                "text": "Cruz introduced the State Marriage Defense Act of 2014, preventing the federal government from defining \"marriage\" or \"spouse\" as anything other than what the states define and recognize them as. Cruz is opposed to same-sex marriage but views it as a state issue: \"I support marriage between one man and one woman. But I also think it's a question for the states. Some states have made decisions one way on gay marriage. Some states have made decisions the other way.",
+                "id": "PB_4FBD8B28C20BBF9ABF2D8919955D9693",
+                "title": "TedCruz MoralsandValues : MARRIAGE RIGHTS AND FAMILY VALUES",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_4FBD8B28C20BBF9ABF2D8919955D9693/520/987",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "TedCruz-MoralsandValues.docx",
+                    "author": "Rose Dawson",
+                    "title": "TedCruz MoralsandValues : MARRIAGE RIGHTS AND FAMILY VALUES",
+                    "corpusName": "PB",
+                    "deepqaid": "33560828",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33560828.xml",
+                    "DOCNO": "4FBD8B28C20BBF9ABF2D8919955D9693"
+                }
+            },
+            {
+                "value": "0.011057917959988117",
+                "text": "And we're joined now by the man invoked in that question, Senator Marco Rubio, also running for president, a member of the Senate Intelligence Committee. Senator Rubio, thank you for joining us this morning.",
+                "id": "PB_FDFE0127E23D432F2D3CC8CEDEDBE459",
+                "title": "Marco Rubio on the Paris Attacks : Marco Rubio on the Paris Attacks",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_FDFE0127E23D432F2D3CC8CEDEDBE459/176/384",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "Marco Rubio on the Paris Attacks.docx",
+                    "title": "Marco Rubio on the Paris Attacks : Marco Rubio on the Paris Attacks",
+                    "corpusName": "PB",
+                    "deepqaid": "33567145",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567145.xml",
+                    "DOCNO": "FDFE0127E23D432F2D3CC8CEDEDBE459"
+                }
+            },
+            {
+                "value": "0.009727695025503635",
+                "text": "Cruz voted against the Employment Non-Discrimination Act (ENDA), which as written violated conscience and religious freedom provisions, in 2013. Ted Cruz has been a leader in the fight to defund Planned Parenthood at the federal level. Additionally, he answered \"yes\" to the following question: \"Will you veto any legislation that provides taxpayer funding for organizations that provide abortions or that funds other organizations that provide abortions, including Planned Parenthood?\" At the second GOP debate, Cruz gave an impassioned defense of defunding Planned Parenthood.",
+                "id": "PB_4FBD8B28C20BBF9A86551E636E703077",
+                "title": "TedCruz MoralsandValues : ABORTION",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_4FBD8B28C20BBF9A86551E636E703077/893/1471",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "TedCruz-MoralsandValues.docx",
+                    "author": "Rose Dawson",
+                    "title": "TedCruz MoralsandValues : ABORTION",
+                    "corpusName": "PB",
+                    "deepqaid": "33560829",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33560829.xml",
+                    "DOCNO": "4FBD8B28C20BBF9A86551E636E703077"
+                }
+            },
+            {
+                "value": "0.009417618624866009",
+                "text": "You've suggested that the Baltic States are not a part of NATO, just months ago you were unfamiliar with the major political parties and government in Israel, and domestically, you thought Alan Greenspan had been treasury secretary instead of federal reserve chair. Aren't these basic mistakes, and don't they raise legitimate questions about whether you are ready to be president? CARSON: Well, I could take issue with all of those things, but we don't have time.",
+                "id": "PB_A791FB99FEB43679BFA260E5F0116252",
+                "title": "Ben Carson on Principles : Ben Carson on Principles & Values : Important experience is having a brain, not being politician",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_A791FB99FEB43679BFA260E5F0116252/324/788",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "Ben Carson on Principles.docx",
+                    "author": "Yellow King",
+                    "title": "Ben Carson on Principles : Ben Carson on Principles & Values : Important experience is having a brain, not being politician",
+                    "corpusName": "PB",
+                    "deepqaid": "33567348",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567348.xml",
+                    "DOCNO": "A791FB99FEB43679BFA260E5F0116252"
+                }
+            },
+            {
+                "value": "0.008677022531628609",
+                "text": "While the mogul continued a tone set in earlier appearances, he was critiqued and questioned on everything from his business practices to demeaning, sexist comments made about women via television and social media. Trump later made highly insulting remarks about moderator Megyn Kelly for the nature of her questions, and was hence disinvited from an Atlanta speaking engagement. He also initially maintained that he might opt for a third-party candidacy if running on the Republican ticket wasn't viable, but later signed a loyalty pledge stating he wouldn't do so.",
+                "id": "PB_328BA94092C69F9A7B088A638D75E96C",
+                "title": "TrumpBio : A Controversial Candidate",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_328BA94092C69F9A7B088A638D75E96C/1324/1890",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "TrumpBio.docx",
+                    "title": "TrumpBio : A Controversial Candidate",
+                    "corpusName": "PB",
+                    "deepqaid": "33560806",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33560806.xml",
+                    "DOCNO": "328BA94092C69F9A7B088A638D75E96C"
+                }
+            },
+            {
+                "value": "0.00845908373594284",
+                "text": "In fact, I am delighted to know that they believe in something that is more likely to make them into a reasonable human being, as long as they don't allow the religion to be distorted by those seeking power and wealth. When I was asked to deliver the keynote address at the 1997 Presidential Prayer Breakfast, I contemplated the question, \"Are we a Judeo-Christian nation or not?\" I spoke about integrity, particularly in public office. I finished the speech with my philosophy for success in life, which includes strong faith in God and my Savior Jesus Christ.",
+                "id": "PB_A791FB99FEB436792538EA986BEAA40C",
+                "title": "Ben Carson on Principles : Ben Carson on Religion : All religions provide beliefs that make us reasonable",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_A791FB99FEB436792538EA986BEAA40C/330/891",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "Ben Carson on Principles.docx",
+                    "author": "Yellow King",
+                    "title": "Ben Carson on Principles : Ben Carson on Religion : All religions provide beliefs that make us reasonable",
+                    "corpusName": "PB",
+                    "deepqaid": "33567370",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567370.xml",
+                    "DOCNO": "A791FB99FEB436792538EA986BEAA40C"
+                }
+            },
+            {
+                "value": "0.007876359857618809",
+                "text": "We must work with our allies to root out terrorist funding networks, provide logistical support in the region, disrupt online radicalization, provide humanitarian relief, and support and defend religious freedom. Moreover, we must begin to address the root causes of radicalization, instead of focusing solely on military responses to those who have already become radicalized. And while there is no question our military must be fully prepared and have the resources it needs to fight international terrorism, it is imperative that we take a hard look at the Pentagon's budget and the priorities it has established. The U.S. military must be equipped to fight today's battles, not those of the last war, much less the Cold War.",
+                "id": "PB_ED13E23217A3B0E1C057B705BD2FD8CF",
+                "title": "BernieSandersWarandPeace : COMBATING TERRORISM",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_ED13E23217A3B0E1C057B705BD2FD8CF/445/1173",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "BernieSandersWarandPeace.docx",
+                    "author": "Hunter Crossett",
+                    "title": "BernieSandersWarandPeace : COMBATING TERRORISM",
+                    "corpusName": "PB",
+                    "deepqaid": "33567252",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567252.xml",
+                    "DOCNO": "ED13E23217A3B0E1C057B705BD2FD8CF"
+                }
+            },
+            {
+                "value": "0.00765598751604557",
+                "text": "It was in 1990, however, that the real estate market declined, reducing the value of and income from Trump's empire; his own net worth plummeted from an estimated $1.7 billion to $500 million. The Trump Organization required a massive infusion of loans to keep it from collapsing, a situation which raised questions as to whether the corporation could survive bankruptcy. Some observers saw Trump's decline as symbolic of many of the business, economic and social excesses that had arisen in the 1980s.",
+                "id": "PB_328BA94092C69F9A519631FDB41BEF7D",
+                "title": "TrumpBio : Ups and Downs of Business",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_328BA94092C69F9A519631FDB41BEF7D/549/1051",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "TrumpBio.docx",
+                    "title": "TrumpBio : Ups and Downs of Business",
+                    "corpusName": "PB",
+                    "deepqaid": "33560803",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33560803.xml",
+                    "DOCNO": "328BA94092C69F9A519631FDB41BEF7D"
+                }
+            },
+            {
+                "value": "0.007335666101425886",
+                "text": "CNN) Team Bush has a strategy to beat Marco Rubio: Compare him with Barack Obama. Which raises the question, who wouldn't want to be Obama?! He's handsome, persuasive and won two presidential elections. The right could do with an Obama, although the dynamics of U.S. politics mean they probably won't get one.",
+                "id": "PB_A90A73C86E586765B9C23A20A162EE1E",
+                "title": "CNN on Rubio and Immigration : CNN on Rubio and Immigration",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_A90A73C86E586765B9C23A20A162EE1E/169/479",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "CNN on Rubio and Immigration.docx",
+                    "title": "CNN on Rubio and Immigration : CNN on Rubio and Immigration",
+                    "corpusName": "PB",
+                    "deepqaid": "33567148",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567148.xml",
+                    "DOCNO": "A90A73C86E586765B9C23A20A162EE1E"
+                }
+            },
+            {
+                "value": "0.007330616470426321",
+                "text": "What is the BEST thing that can happen if I DON'T do it? What is the WORST thing that can happen if I DON'T do it? you're probably looking at the questions, shaking your head, and thinking, \"Is it that easy?\" I believe it is, and the remainder of this book looks at examples of how this simple risk-analysis approach can be applied in our personal and professional lives--and how the same prescription could be applied to some of the most complex and troubling issues facing our nation--and our world--today.",
+                "id": "PB_A791FB99FEB4367916D650AA75C5537E",
+                "title": "Ben Carson on Principles : Ben Carson on Principles & Values : B/WA: Best/Worst Analysis for risk assessment",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_A791FB99FEB4367916D650AA75C5537E/646/1154",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "Ben Carson on Principles.docx",
+                    "author": "Yellow King",
+                    "title": "Ben Carson on Principles : Ben Carson on Principles & Values : B/WA: Best/Worst Analysis for risk assessment",
+                    "corpusName": "PB",
+                    "deepqaid": "33567353",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567353.xml",
+                    "DOCNO": "A791FB99FEB4367916D650AA75C5537E"
+                }
+            },
+            {
+                "value": "0.00714670168235898",
+                "text": "Carly Fiorina and Ted Cruz also had good nights. Fiorina offering an unflappable defense yet again on her record at HP, and Cruz blasting the debate moderators for their \"cage match\" questions. Donald Trump seemed invisible again. It's becoming more clear that his rallies are where his energy is at, not debates. And Ben Carson failed to step up to his frontrunner status.",
+                "id": "PB_BCC018B85EBB1B73FAFD47B50F285D3E",
+                "title": "CNN on Marco Rubio and Debates : CNN on Marco Rubio's Debate Presence",
+                "document": "http://10.121.2.164:8080/instance/556/deepqa/v1/question/document/PB_BCC018B85EBB1B73FAFD47B50F285D3E/757/1130",
+                "copyright": "No copyright specified for this supporting passage or document.",
+                "termsOfUse": "No license specified for this supporting passage or document.",
+                "metadataMap": {
+                    "originalfile": "CNN on Marco Rubio and Debates.docx",
+                    "title": "CNN on Marco Rubio and Debates : CNN on Marco Rubio's Debate Presence",
+                    "corpusName": "PB",
+                    "deepqaid": "33567151",
+                    "fileName": "/watsondata/ingestion/14fd8439d90/working/201512022231/eng/di/output/trec/intermediate/xml-splitTrecTrim/33567151.xml",
+                    "DOCNO": "BCC018B85EBB1B73FAFD47B50F285D3E"
+                }
+            }
+        ],
+        "synonymList": [
+            {
+                "partOfSpeech": "noun",
+                "value": "QUESTION",
+                "lemma": "question",
+                "synSet": [
+                    {
+                        "name": "Wordnet_question-noun-1",
+                        "synonym": [
+                            {
+                                "isChosen": true,
+                                "value": "inquiry",
+                                "weight": 1
+                            },
+                            {
+                                "isChosen": true,
+                                "value": "enquiry",
+                                "weight": 1
+                            },
+                            {
+                                "isChosen": true,
+                                "value": "interrogation",
+                                "weight": 1
+                            },
+                            {
+                                "isChosen": true,
+                                "value": "query",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "disambiguatedEntities": [],
+        "pipelineid": "1335530418",
+        "formattedAnswer": false,
+        "category": "",
+        "items": 5,
+        "status": "Complete",
+        "id": "F97AE7226B7E4535ABA65951E1893787",
+        "questionText": "FUCKING QUESTION",
+        "evidenceRequest": {
+            "items": -1,
+            "profile": "NO"
+        },
+        "answers": [
+            {
+                "id": 0,
+                "text": "8E4A4D1DF1032D9EA01A1EA9EAE3021B - M 638 red : Learn About the United States : English Test : Learn About the United States Quick Civics Lessons for the Naturalization Test Audio CD : 100 Questions and Answers for the Naturalization Test*",
+                "pipeline": "Descriptive,TAO",
+                "confidence": 0.27707,
+                "entityTypes": []
+            },
+            {
+                "id": 1,
+                "text": "${noAnswer}",
+                "pipeline": "OffTopic",
+                "confidence": 0.0202,
+                "entityTypes": []
+            },
+            {
+                "id": 2,
+                "text": "8E4A4D1DF1032D9E1A4C2FEB0B3C9ACB - M 638 red : Learn About the United States : Learn About the United States: Quick Civics Lessons : More Resources to Help You Study",
+                "pipeline": "Descriptive,TAO",
+                "confidence": 0.02002,
+                "entityTypes": []
+            },
+            {
+                "id": 3,
+                "text": "8E4A4D1DF1032D9E602CC7A551A8A0F2 - M 638 red : Learn About the United States : Learn About the United States: Quick Civics Lessons",
+                "pipeline": "Descriptive,TAO",
+                "confidence": 0.01695,
+                "entityTypes": []
+            },
+            {
+                "id": 4,
+                "text": "8E4A4D1DF1032D9E9FDC73246E483ED8 - M 638 red : Learn About the United States : English Test : U.S. Government Official Edition Notice",
+                "pipeline": "Descriptive,TAO",
+                "confidence": 0.01512,
+                "entityTypes": []
+            }
+        ],
+        "errorNotifications": [],
+        "passthru": ""
+    }
+}
