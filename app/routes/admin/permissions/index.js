@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   setupController: function(controller, model){
     controller.set('model', model);
   },
-  model: function(){
+  model: function(params){
     return this.store.find('permission');
   }
 });

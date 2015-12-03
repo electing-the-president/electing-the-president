@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'electing-the-president',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    defaultLocationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -17,12 +17,46 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       SAILS_LOG_LEVEL: 'debug',
- emberDataSails:  {
-   // default is to use same host and port as the ember app:
-   //host: '//localhost:1337',
-   // this is the default and is the path to the sails io script:
-   //scriptPath: '/js/dependencies/sails.io.js'
- }
+      emberDataSails: {
+        // default is to use same host and port as the ember app:
+        //host: '//localhost:1337',
+        // this is the default and is the path to the sails io script:
+        //scriptPath: '/js/dependencies/sails.io.js'
+      }
+    }
+  };
+
+  ENV.cordova = {
+    // Rebuild the cordova project on file changes. Blocks the server until it's
+    // finished.
+    //
+    // default: false
+    //rebuildOnChange: true,
+
+    // Run the cordova emulate command after the build is finished
+    //
+    // default: false
+    //emulate: true,
+
+    // Which platform to build and/or emulate
+    //
+    // default: 'ios'
+    platform: 'android',
+
+    // Which URL the ember server is running on. This is used when using
+    // live-reload that comes with the starter kit.
+    //
+    // default: 'the-device-ip:4200'
+    //emberUrl: 'http://10.0.1.12:4200',
+
+    // Whether or not to use liveReload on the device simulator. Requires a few
+    // plugins to be installed that come with the starter-kit. It will cause your
+    // app to not boot up in the browser
+    //
+    // default: false and iOS
+    liveReload: {
+      enabled: false,
+      platform: 'android'
     }
   };
 
