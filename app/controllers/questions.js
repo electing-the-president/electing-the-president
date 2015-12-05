@@ -19,8 +19,7 @@ export default Ember.Controller.extend({
         data: JSON.stringify(data),
         headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'Cache-Control': 'no-cache'
+          'Content-Type': 'application/json'
         },
         method: "POST",
         dataType: 'json',
