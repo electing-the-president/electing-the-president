@@ -10,19 +10,15 @@ export default Ember.Controller.extend({
     submitQuestion: function() {
       var _this = this;
       var data = {
-         "question": {
-           "questionText": this.get('question')
-         }
+         "question": this.get('question')
        };
        _this.set('watsonResponse', 'loading');
         //alert(JSON.stringify(data));
       Ember.$.ajax({
-        url: "https://dal09-gateway.watsonplatform.net/instance/556/deepqa/v1/question",
+        url: "https://elthpr.mybluemix.net/ask",
         data: JSON.stringify(data),
         headers: {
-          'X-SyncTimeout': '30',
           'Accept': 'application/json',
-          'Authorization': 'Basic bHN1X3N0dWRlbnQxMjpIVFlveVBxSQ==',
           'Content-Type': 'application/json',
           'Cache-Control': 'no-cache'
         },
