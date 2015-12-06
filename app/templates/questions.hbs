@@ -1,66 +1,77 @@
 <div class="page-header">
-  <h1>Question? <small>Q&A with our Watson instance</small></h1>
+  <h1>
+    Question?<br>
+    <small>Q&A with Watson</small>
+  </h1>
 </div>
-<form class="form-horizontal" >
-  <div class="form-group">
-    <div class="col-sm-11">
-      {{input value=question placeholder="What do you want to know?" class="form-control"}}
+<div class="row">
+  <form>
+    <div class="form-group col-xs-12">
+      <div class="input-group">
+        {{input value=question placeholder="What do you want to know?" class="form-control"}}
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary" {{action 'submitQuestion'}}>Ask</button>
+        </span>
+      </div>
+      <!-- /input-group -->
     </div>
-    <div class="col-sm-1">
-      <button type="submit" class="btn btn-primary" {{action 'submitQuestion'}}>Ask</button>
-    </div>
-    </div>
-</form>
+  </form>
+</div>
 {{#if error}}
-<div class="alert alert-dismissible alert-danger">
-  <button type="button" class="close" data-dismiss="alert">X</button>
-  <h4>{{error.status}}</h4>
-  {{error.message}}
-</div>
-{{/if}}
-{{#if loading}}
-  <div class="spinner">
-    <h3 class="text-center">Loading...</h3>
-    <div class="bounce1"></div>
-    <div class="bounce2"></div>
-    <div class="bounce3"></div>
+  <div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">X</button>
+    <h4>{{error.status}}</h4>
+    {{error.message}}
   </div>
-{{/if}}
-{{#if watsonResponse}}
-  <h3><em class="text-muted">{{watsonResponse.question.questionText}}</em></h3>
-  {{#if watsonResponse.question.answers}}
-    {{#each watsonResponse.question.answers}}
-    <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">{{heading}}</h3>
-                  </div>
-                  <div class="panel-body">
-                    {{{body}}}
-                  </div>
-                </div>
-      <h6>
-        <b>confidence:</b> {{confidence}} |
-        <b>pipeline:</b> {{pipeline}} |
-        <b>text:</b> {{text}}
-      </h6>
-      <hr>
-    {{/each}}
-  {{else}}
-    <h3 class="text-primary">Sorry, we are unable answer your question at this time.</h3>
-    <h3 class="text-primary">Is there anything else you'd like to know?</h3>
-  {{/if}}
+  <h3 class="text-primary">Sorry, we are unable answer your question at this time.</h3>
 {{else}}
-<br><br>
-  <h3>Example Questions</h3>
-  <ul>
-    <li>
-      <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Who is Ben Carson?'}}>Who is Ben Carson?</a></h4>
-    </li>
-    <li>
-      <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Does Donald Trump support the troops?'}}>Does Donald Trump support the troops?</a></h4>
-    </li>
-    <li>
-      <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Does Hillary Clinton want to legalize marijuana?'}}>Does Hillary Clinton want to legalize marijuana?</a></h4>
-    </li>
-  </ul>
+  {{#if loading}}
+    <div class="spinner">
+      <h3 class="text-center">Loading...</h3>
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  {{else}}
+    {{#if watsonResponse}}
+      <h3>
+        <em class="text-muted">{{watsonResponse.question.questionText}}</em>
+      </h3>
+      {{#if watsonResponse.question.answers}}
+        {{#each watsonResponse.question.answers}}
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{heading}}</h3>
+            </div>
+            <div class="panel-body">
+              {{{body}}}
+            </div>
+          </div>
+          <h6>
+            <b>confidence:</b> {{confidence}} |
+            <b>pipeline:</b> {{pipeline}} |
+            <b>text:</b> {{text}}
+          </h6>
+          <hr>
+        {{/each}}
+      {{else}}
+        <h3 class="text-primary">Sorry, we are unable answer your question at this time.</h3>
+        <h3 class="text-primary">Is there anything else you'd like to know?</h3>
+      {{/if}}
+    {{else}}
+      <br>
+      <h3>Example Questions</h3>
+      <ul>
+        <li>
+          <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Who is Ben Carson?'}}>Who is Ben Carson?</a></h4>
+        </li>
+        <li>
+          <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Does Donald Trump support the troops?'}}>Does Donald Trump support the troops?</a></h4>
+        </li>
+        <li>
+          <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Does Hillary Clinton want to legalize marijuana?'}}>Does Hillary Clinton want to legalize marijuana?</a></h4>
+        </li>
+      </ul>
+    {{/if}}
+  {{/if}}
 {{/if}}
