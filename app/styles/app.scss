@@ -1,12 +1,22 @@
+@import "./_variables.scss";
 @import "bootstrap";
-@import "./holo";
+@import "./_bootswatch.scss";
+
+body {
+  padding-top: 60px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
 
 //Highlighting
 pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
 .string { color: green; }
 .number { color: darkorange; }
 .boolean { color: blue; }
-.null { color: magenta; }
+//.null { color: magenta; }
 .key { color: red; }
 
 .spinner {
