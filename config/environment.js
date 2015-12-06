@@ -83,7 +83,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiEndPoint = 'https://electing-the-president.mybluemix.net';
+    ENV.apiEndPoint = 'https://elthpr.mybluemix.net';
   }
 
   return ENV;

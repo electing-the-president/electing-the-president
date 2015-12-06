@@ -11,6 +11,13 @@
     </div>
     </div>
 </form>
+{{#if error}}
+<div class="alert alert-dismissible alert-danger">
+  <button type="button" class="close" data-dismiss="alert">X</button>
+  <h4>{{error.status}}</h4>
+  {{error.message}}
+</div>
+{{/if}}
 {{#if loading}}
   <div class="spinner">
     <h3 class="text-center">Loading...</h3>
@@ -20,21 +27,40 @@
   </div>
 {{/if}}
 {{#if watsonResponse}}
-  <h2><em>{{watsonResponse.question.questionText}}</em></h2>
-  {{#each watsonResponse.question.answers}}
-  <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">{{heading}}</h3>
+  <h3><em class="text-muted">{{watsonResponse.question.questionText}}</em></h3>
+  {{#if watsonResponse.question.answers}}
+    {{#each watsonResponse.question.answers}}
+    <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">{{heading}}</h3>
+                  </div>
+                  <div class="panel-body">
+                    {{{body}}}
+                  </div>
                 </div>
-                <div class="panel-body">
-                  {{{body}}}
-                </div>
-              </div>
-    <h6>
-      <b>confidence:</b> {{confidence}} |
-      <b>pipeline:</b> {{pipeline}} |
-      <b>text:</b> {{text}}
-    </h6>
-    <hr>
-  {{/each}}
+      <h6>
+        <b>confidence:</b> {{confidence}} |
+        <b>pipeline:</b> {{pipeline}} |
+        <b>text:</b> {{text}}
+      </h6>
+      <hr>
+    {{/each}}
+  {{else}}
+    <h3 class="text-primary">Sorry, we are unable answer your question at this time.</h3>
+    <h3 class="text-primary">Is there anything else you'd like to know?</h3>
+  {{/if}}
+{{else}}
+<br><br>
+  <h3>Example Questions</h3>
+  <ul>
+    <li>
+      <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Who is Ben Carson?'}}>Who is Ben Carson?</a></h4>
+    </li>
+    <li>
+      <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Does Donald Trump support the troops?'}}>Does Donald Trump support the troops?</a></h4>
+    </li>
+    <li>
+      <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Does Hillary Clinton want to legalize marijuana?'}}>Does Hillary Clinton want to legalize marijuana?</a></h4>
+    </li>
+  </ul>
 {{/if}}

@@ -1,22 +1,27 @@
 import Ember from 'ember';
+import ENV from 'electing-the-president/config/environment';
 
 export default Ember.Controller.extend({
   question: '',
   watsonResponse: null,
+  error: false,
   loading: function(){
-    return this.get('watsonResponse') === 'loading';
-  }.property('watsonResponse'),
+    return this.get('watsonResponse') === 'loading' && this.get('error') === false;
+  }.property('watsonResponse', 'error'),
   actions: {
-    submitQuestion: function() {
+    submitQuestion: function(q) {
       var _this = this;
+      if(q) {
+        this.set('question', q);
+      }
       var data = {
          "question": this.get('question')
        };
+       _this.set('error', false);
        _this.set('watsonResponse', 'loading');
         //alert(JSON.stringify(data));
       Ember.$.ajax({
-        //url: "https://elthpr.mybluemix.net/ask",
-        url: "http://localhost:1337/ask",
+        url: ENV.apiEndPoint + '/ask',
         data: JSON.stringify(data),
         headers: {
           'Accept': 'application/json',
@@ -24,6 +29,12 @@ export default Ember.Controller.extend({
         },
         method: "POST",
         dataType: 'json',
+        error: function(xhr, status, message) {
+          _this.set('error', {
+            status: status.charAt(0).toUpperCase() + status.slice(1),
+            message: message}
+          );
+        },
         success: function(s) {
           //alert(s);
           var headingRegex = /<h1.*>([^:]*).*<\/h1>/i;
