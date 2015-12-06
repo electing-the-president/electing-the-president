@@ -10,7 +10,7 @@
       <div class="input-group">
         {{input value=question placeholder="What do you want to know?" class="form-control"}}
         <span class="input-group-btn">
-          <button type="submit" class="btn btn-primary" {{action 'submitQuestion'}}>Ask</button>
+          <button type="submit" class="btn btn-primary" {{action 'askWatson'}}>Ask</button>
         </span>
       </div>
       <!-- /input-group -->
@@ -63,13 +63,13 @@
       <h3>Example Questions</h3>
       <ul>
         <li>
-          <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Who is Ben Carson?'}}>Who is Ben Carson?</a></h4>
+          <h4 class="text-info"><a href="#" {{action 'askWatson' 'Who is Ben Carson?'}}>Who is Ben Carson?</a></h4>
         </li>
         <li>
-          <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Does Donald Trump support the troops?'}}>Does Donald Trump support the troops?</a></h4>
+          <h4 class="text-info"><a href="#" {{action 'askWatson' 'Does Donald Trump support the troops?'}}>Does Donald Trump support the troops?</a></h4>
         </li>
         <li>
-          <h4 class="text-info"><a href="#" {{action 'submitQuestion' 'Does Hillary Clinton want to legalize marijuana?'}}>Does Hillary Clinton want to legalize marijuana?</a></h4>
+          <h4 class="text-info"><a href="#" {{action 'askWatson' 'Does Hillary Clinton want to legalize marijuana?'}}>Does Hillary Clinton want to legalize marijuana?</a></h4>
         </li>
       </ul>
     {{/if}}

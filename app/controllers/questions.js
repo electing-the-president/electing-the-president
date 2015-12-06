@@ -9,6 +9,15 @@ export default Ember.Controller.extend({
     return this.get('watsonResponse') === 'loading' && this.get('error') === false;
   }.property('watsonResponse', 'error'),
   actions: {
+    askWatson: function(question){
+      if (!question) {
+        question = this.get('question');
+      }
+      if(!question || question === '') {
+        return;
+      }
+      this.controllerFor('application').send('askWatson', question);
+    },
     submitQuestion: function(q) {
       var _this = this;
       if (q) {
