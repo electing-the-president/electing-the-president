@@ -7,44 +7,44 @@ export default Ember.Controller.extend({
   userData: null,
   progress: 0,
   graphData: function() {
-    var data = [];
+    var gData = [];
     var raw = this.get('userInsights.tree.children');
     var i = -1;
     while (raw[++i].name !== 'Big 5') {}
     console.log(raw[i]);
     raw = raw[i].children[0].children;
     for (var q = 0; q < raw.length; ++q) {
-      console.log(raw[q]);
-      console.log(raw[q].id);
+      //console.log(raw[q]);
+      //console.log(raw[q].id);
       if (raw[q].id === "Conscientiousness_parent") {
-        data.push({
+        gData.push({
           axis: "Open",
           value: raw[q].percentage * 5
         });
       } else if (raw[q].id === "Conscientiousness") {
-        data.push({
+        gData.push({
           axis: "Conscientious",
           value: raw[q].percentage * 5
         });
       } else if (raw[q].id === "Extraversion") {
-        data.push({
+        gData.push({
           axis: "Extraverted",
           value: raw[q].percentage * 5
         });
       } else if (raw[q].id === "Agreeableness") {
-        data.push({
+        gData.push({
           axis: "Agreeable",
           value: raw[q].percentage * 5
         });
       } else if (raw[q].id === "Neuroticism") {
-        data.push({
+        gData.push({
           axis: "Neurotic",
           value: raw[q].percentage * 5
         });
       }
     }
-    console.log(data);
-    return data;
+    console.log(gData);
+    return gData;
   }.property('userInsights'),
   formattedInsights: function() {
     console.log('grt');
@@ -91,6 +91,7 @@ export default Ember.Controller.extend({
     Ember.$.ajax({
       dataType: "json",
       url: ENV.apiEndPoint + '/insights/analyze',
+      type: 'POST',
       data: request,
       success: function(response) {
         _this.set('userInsights', response);
@@ -107,7 +108,7 @@ export default Ember.Controller.extend({
 
       function finish() {
         console.log('All done!');
-        _this.set('userData', dataCollection.join(' '));
+        _this.set('userData', dataCollection.join(' ').replace(/(\r\n|\n|\r)/gm,' '));
         _this.set('fetching', false);
         _this.getInsights();
       }
@@ -123,7 +124,11 @@ export default Ember.Controller.extend({
           for (let post of posts.data) {
             //console.log(post);
             if (post.message) {
-              dataCollection.push(post.message);
+              if(Array.isArray(dataCollection)){
+                dataCollection.push(post.message);
+              } else {
+                dataCollection = dataCollection + post.message.replace(/(\r\n|\n|\r)/gm,' ');
+              }
             }
           }
         }
