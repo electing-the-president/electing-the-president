@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   userAuth: null,
   userInfo: null,
   userData: null,
-  progress: 90,
+  progress: 0,
   graphData: function() {
     var data = [];
     var raw = this.get('userInsights.tree.children');
