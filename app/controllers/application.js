@@ -53,7 +53,7 @@ export default Ember.Controller.extend({
     try {
       //alert(JSON.stringify(data));
       Ember.$.ajax({
-        url: ENV.apiEndPoint + '/ask',
+        url: ENV.apiEndPoint + '/asks/question',
         data: JSON.stringify(data),
         headers: {
           'Accept': 'application/json',

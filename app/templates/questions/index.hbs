@@ -1,7 +1,8 @@
-{{#each model}}
-  {{id}}<br>
-  {{text}}<br>
-  {{status}}<br>
-  {{createdAt}}<br>
-  {{updatedAt}}<br>
+<div class='text-center'>{{pagination-pager count=totalPages current=currentPage change='pageChanged'}}</div>
+{{#each pagedModel}}
+<li>
+  <h4 class="text-info"><a href="#" {{action 'askWatson' question}}>{{question}}</a> <small>({{moment-from-now createdOrUpdated}})</small></h4>
+</li>
 {{/each}}
+<div class='text-center'>{{pagination-pager count=totalPages current=currentPage change='pageChanged'}}</div>
+<h6 class="text-center">Page {{currentPage}} of {{totalPages}}</h6>

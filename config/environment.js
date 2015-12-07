@@ -19,7 +19,7 @@ module.exports = function(environment) {
       SAILS_LOG_LEVEL: 'debug',
       emberDataSails: {
         // default is to use same host and port as the ember app:
-        //host: '//localhost:1337',
+        host: '//localhost:1337',
         // this is the default and is the path to the sails io script:
         //scriptPath: '/js/dependencies/sails.io.js'
       }
@@ -85,6 +85,11 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.apiEndPoint = 'https://elthpr.mybluemix.net';
   }
+
+  // allow to fetch the script
+//ENV.contentSecurityPolicy['script-src'] += ' http://localhost:1337 http://etp.selby.io';
+// allow the websocket to connect
+//ENV.contentSecurityPolicy['connect-src'] += ' http://localhost:1337 ws://etp.selby.io';
 
   return ENV;
 };
