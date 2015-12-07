@@ -36,6 +36,7 @@ Router.map(function() {
     this.route('register');
   });
   this.route('insights');
+  this.route('candidates', function() {});
 });
 
 export default Router;

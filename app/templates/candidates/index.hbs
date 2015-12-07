@@ -1,0 +1,19 @@
+{{#each model}}
+  <h3><b>{{name}}</b></h3>
+  <h4><b>Gender</b></h4>
+  <h3>{{gender}}</h3>
+  <h4><b>Birthdate</b></h4>
+  <h3>{{birthdate}}</h3>
+  <h4><b>Birthplace</b></h4>
+  <h3>{{birthplace}}</h3>
+  <h4><b>Hometown</b></h4>
+  <h3>{{hometown}}</h3>
+  <h4><b>Religion</b></h4>
+  <h3>{{religion}}</h3>
+  <h4><b>Education</b></h4>
+  <h3>{{markdown-to-html markdown=education}}</h3>
+  <h4><b>Political</b></h4>
+  <h3>{{markdown-to-html markdown=political}}</h3>
+  <h4><b>Professional</b></h4>
+  <h3>{{markdown-to-html markdown=professional}}</h3>
+{{/each}}
