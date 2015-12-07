@@ -1,0 +1,77 @@
+<div class="page-header">
+  <h1>
+    Personality Insights<br>
+    <small>Find out which candidates think most like you</small>
+  </h1>
+</div>
+<p class="lead">Using your Facebook information, Watson can attempt to learn your
+  personality, and we can match you up with the most similar candidates.</p>
+<div class="row">
+  {{#if userInsights}}
+  <div class="col-md-7 col-md-push-5">
+    <h3 class="text-center">Visualized</h3>
+    {{#if graphData}}
+      {{personality-insights dataSetOne=graphData dataSetTwo=graphData}}
+    {{/if}}
+  </div>
+  <div class="col-md-5 col-md-pull-7">
+    <h3 class="text-center">Data Behind Your Personality</h3>
+    <div style="" class="col555px well traits">
+      <div id="header-template">
+        <div class="row theader">
+          <div class="col-lg-7 col-xs-7">
+            <span>Name</span>
+          </div>
+          <div class="col-lg-5 col-xs-5 text-right">
+            <span>Value</span>
+          </div>
+        </div>
+      </div>
+      {{#each formattedInsights.tree.children}}
+        <div id="model-template" class="row model_title model_name">
+          <div class="row">
+            <div class="col-lg-12 col-xs-12 text-center">
+              <span>{{name}}</span>
+            </div>
+          </div>
+        </div>
+        {{#each children}}
+          <div id="trait-template" class="row model_title">
+            <div class="row">
+              <div class="tname col-lg-7 col-xs-7">
+                <span>{{name}}</span>
+              </div>
+              <div class="tvalue col-lg-5 col-xs-5 text-right">
+                <span>{{percentage}} +- {{sampling_error}}</span>
+              </div>
+            </div>
+          </div>
+          {{#each children}}
+            <div id="trait-template" class="row model_trait">
+              <div class="row">
+                <div class="tname col-lg-7 col-xs-7">
+                  <span>{{name}}</span>
+                </div>
+                <div class="tvalue col-lg-5 col-xs-5 text-right">
+                  <span>{{percentage}} +- {{sampling_error}}</span>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        {{/each}}
+      {{/each}}
+    </div>
+  </div>
+  {{else}}
+  <h1 class="text-center">  <input class="btn btn-primary btn-lg" type="button" value="Analyze Your Data!" {{action 'getUserStatuses'}}>
+    <small>{{#if fetching}}
+    <h5>Fetching your Facebook info...</h5>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow={{progress}} aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
+        <span class="sr-only">{{progress}}% Complete</span>
+      </div>
+    </div>
+    {{/if}}</small></h1>
+
+  {{/if}}
+</div>

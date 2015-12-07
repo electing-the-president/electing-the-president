@@ -21,7 +21,7 @@ module.exports = function(environment) {
         // default is to use same host and port as the ember app:
         host: '//localhost:1337',
         // this is the default and is the path to the sails io script:
-        //scriptPath: '/js/dependencies/sails.io.js'
+        scriptPath: '/js/dependencies/sails.io.js'
       }
     }
   };
@@ -84,6 +84,8 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.apiEndPoint = 'https://elthpr.mybluemix.net';
+    ENV.APP.emberDataSails.host = 'https://elthpr.mybluemix.net';
+    ENV.APP.emberDataSails.scriptPath = '/js/dependencies/sails.io.js';
   }
 
   // allow to fetch the script

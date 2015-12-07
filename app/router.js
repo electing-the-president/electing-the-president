@@ -35,6 +35,7 @@ Router.map(function() {
   this.route('user', function() {
     this.route('register');
   });
+  this.route('insights');
 });
 
 export default Router;
