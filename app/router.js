@@ -37,6 +37,7 @@ Router.map(function() {
   });
   this.route('insights');
   this.route('candidates', function() {});
+  this.route('about');
 });
 
 export default Router;

@@ -1,8 +1,8 @@
 import Ember from 'ember';
-var dataValues;
+var dataValues = [], newX, newY, z;
 var color, colorscale, RadarChart;
-var w = 320,
-  h = 320;
+var w = 200,
+  h = 200;
 
 //Options for the Radar chart, other than default
 var mycfg = {
@@ -83,7 +83,6 @@ export default Ember.Component.extend({
     this.set('eleId', '#' + eleId);
     this.$().attr('id', eleId);
     var _this = this;
-    console.log('get');
 
     var loadD3 = new Ember.RSVP.Promise(function(resolve, reject) {
       try {
@@ -242,7 +241,7 @@ export default Ember.Component.extend({
 
 
           d.forEach(function(y, x) {
-            var dataValues = [];
+            dataValues = [];
             g.selectAll(".nodes")
               .data(y, function(j, i) {
                 dataValues.push([
@@ -276,7 +275,7 @@ export default Ember.Component.extend({
                   .style("fill-opacity", 0.1);
                 g.selectAll(z)
                   .transition(200)
-                  .style("fill-opacity", .7);
+                  .style("fill-opacity", 0.7);
               })
               .on('mouseout', function() {
                 g.selectAll("polygon")
@@ -306,9 +305,9 @@ export default Ember.Component.extend({
                 return cfg.h / 2 * (1 - (Math.max(j.value, 0) / cfg.maxValue) * cfg.factor * Math.cos(i * cfg.radians / total));
               })
               .attr("data-id", function(j) {
-                return j.axis
+                return j.axis;
               })
-              .style("fill", cfg.color(series)).style("fill-opacity", .9)
+              .style("fill", cfg.color(series)).style("fill-opacity", 0.9)
               .on('mouseover', function(d) {
                 newX = parseFloat(window.d3.select(this).attr('cx')) - 10;
                 newY = parseFloat(window.d3.select(this).attr('cy')) - 5;
@@ -316,7 +315,7 @@ export default Ember.Component.extend({
                 tooltip
                   .attr('x', newX)
                   .attr('y', newY)
-                  .text(Format(d.value))
+                  .text(new Format(d.value))
                   .transition(200)
                   .style('opacity', 0);
 
@@ -326,7 +325,7 @@ export default Ember.Component.extend({
                   .style("fill-opacity", 0.1);
                 g.selectAll(z)
                   .transition(200)
-                  .style("fill-opacity", .7);
+                  .style("fill-opacity", 0.7);
               })
               .on('mouseout', function() {
                 tooltip
@@ -363,7 +362,7 @@ export default Ember.Component.extend({
     /////////// Initiate legend ////////////////
     ////////////////////////////////////////////
 
-    var svg = window.d3.select('#body')
+    var svg = window.d3.select(this.get('eleId'))
       .selectAll('svg')
       .append('svg')
       .attr("width", w + 300)

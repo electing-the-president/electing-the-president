@@ -47,7 +47,6 @@ export default Ember.Controller.extend({
     return gData;
   }.property('userInsights'),
   formattedInsights: function() {
-    console.log('grt');
     var raw = this.get('userInsights');
 
     function formatTree(tree) {
@@ -80,13 +79,13 @@ export default Ember.Controller.extend({
   }.property('userInsights'),
   userInsights: null,
   fetching: false,
-  numPagesToFetch: 100,
+  numPagesToFetch: 50,
   getInsights: function() {
     var _this = this;
     var request = {
       type: 'fb',
-      typeId: this.get('userInfo.id'),
-      rawInputText: this.get('userData')
+      typeId: _this.get('userInfo').id,
+      rawInputText: _this.get('userData')
     };
     Ember.$.ajax({
       dataType: "json",
@@ -100,6 +99,7 @@ export default Ember.Controller.extend({
   },
   actions: {
     getUserStatuses: function() {
+      this.set('userData', null);
       var _this = this;
       var next = null;
       var totalPages = this.get('numPagesToFetch');
@@ -116,7 +116,7 @@ export default Ember.Controller.extend({
       function parseData(posts) {
         _this.set('progress', (totalPages - numPages) / totalPages * 100);
         if (posts && posts.paging && posts.paging.next) {
-          next = posts.paging.next;
+          next = posts.paging.next.replace(/limit=25/gi,'limit=100');
         } else {
           numPages = 0;
         }
@@ -133,7 +133,7 @@ export default Ember.Controller.extend({
           }
         }
         if (numPages-- > 0) {
-          setTimeout(fetchData, 250);
+          fetchData();
         } else {
           finish();
         }
@@ -152,16 +152,16 @@ export default Ember.Controller.extend({
           );
         } else {
           Ember.$.getJSON(next, function(response) {
-              console.log("success");
+              //console.log("success");
               parseData(response);
             })
             .fail(function() {
-              console.log("error");
+              //console.log("error");
               numPages = 0;
               finish();
             })
             .always(function() {
-              console.log("complete");
+              //console.log("complete");
             });
         }
       }

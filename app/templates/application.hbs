@@ -2,32 +2,40 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">ETP</a>
-
+      <a class="navbar-brand"  href="#"><img alt="Electing The President" src="/flagman.png" class="img-responsive pull-left"> <span class="text-danger">E</span>T<span class="text-info">P</span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="navbarMenu">
       <ul class="nav navbar-nav">
         {{#link-to 'candidates' tagName="li" href=false}}
           <a {{bind-attr href="view.href"}}>
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
               The Candidates
             </a>
         {{/link-to}}
         {{#link-to 'questions.index' tagName="li" href=false}}
           <a {{bind-attr href="view.href"}}>
+            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
               Ask Watson
             </a>
         {{/link-to}}
         {{#link-to 'insights' tagName="li" href=false}}
           <a {{bind-attr href="view.href"}}>
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
               Personality Insights
+            </a>
+        {{/link-to}}
+        {{#link-to 'about' tagName="li" href=false}}
+          <a {{bind-attr href="view.href"}}>
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+              About
             </a>
         {{/link-to}}
       </ul>
