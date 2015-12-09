@@ -8,6 +8,9 @@ export default Ember.Route.extend({
     willTransition: (t) => {
       Ember.$('#navbarMenu').collapse('hide');
       Ember.$("#mobileMenu").data("mmenu").close();
+    },
+    didTransition: (t) => {
+      ('html, body').animate({ scrollTop: 0 }, 0);
     }
   }
 });
