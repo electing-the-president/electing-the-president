@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ElectingThePresident</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for 'head'}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ElectingThePresident</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  {{content-for 'head'}}
 
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/electing-the-president.css">
+  <link rel="stylesheet" href="assets/vendor.css">
+  <link rel="stylesheet" href="assets/electing-the-president.css"> {{content-for 'head-footer'}}
+</head>
 
-    {{content-for 'head-footer'}}
-  </head>
-  <body>
+<body>
 
-    {{content-for 'body'}}
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/electing-the-president.js"></script>
+  {{content-for 'body'}}
 
-    {{content-for 'body-footer'}}
-    <script>
+  <script src="assets/vendor.js"></script>
+  <script src="assets/electing-the-president.js"></script>
+
+
+  {{content-for 'body-footer'}}
+  <script>
     window.fbAsyncInit = function() {
       FB.init({
-        appId      : '1499867060310161',
-        xfbml      : true,
-        version    : 'v2.5'
+        appId: '1499867060310161',
+        xfbml: true,
+        version: 'v2.5'
       });
     };
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk/debug.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-  </body>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk/debug.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+
 </html>

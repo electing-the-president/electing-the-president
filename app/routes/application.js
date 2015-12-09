@@ -7,6 +7,7 @@ export default Ember.Route.extend({
   actions: {
     willTransition: (t) => {
       Ember.$('#navbarMenu').collapse('hide');
+      Ember.$("#mobileMenu").data("mmenu").close();
     }
   }
 });

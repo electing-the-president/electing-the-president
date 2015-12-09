@@ -1,75 +1,103 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand"  href="#"><img alt="Electing The President" src="/flagman.png" class="img-responsive pull-left"> <span class="text-danger">E</span>T<span class="text-info">P</span></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="nav navbar-nav">
-        {{#link-to 'candidates' tagName="li" href=false}}
-          <a {{bind-attr href="view.href"}}>
-            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-              The Candidates
-            </a>
-        {{/link-to}}
-        {{#link-to 'questions.index' tagName="li" href=false}}
-          <a {{bind-attr href="view.href"}}>
-            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-              Ask Watson
-            </a>
-        {{/link-to}}
-        {{#link-to 'insights' tagName="li" href=false}}
-          <a {{bind-attr href="view.href"}}>
-            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-              Personality Insights
-            </a>
-        {{/link-to}}
-        {{#link-to 'about' tagName="li" href=false}}
-          <a {{bind-attr href="view.href"}}>
-            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-              About
-            </a>
-        {{/link-to}}
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        {{#if session.isAuthenticated}}
-          {{#link-to 'users.index' tagName="li" href=false}}
-            <a {{bind-attr href="view.href"}}>
-              Users
-            </a>
-          {{/link-to}}
-          {{#link-to 'admin.models.index' tagName="li" href=false}}
-            <a {{bind-attr href="view.href"}}>
-              Models
-            </a>
-          {{/link-to}}
-          <li><a {{action 'invalidateSession'}}>Logout</a></li>
-        {{else}}
-          {{#link-to 'login' tagName="li" href=false}}
-            <a {{bind-attr href="view.href"}}>
-              Login
-            </a>
-          {{/link-to}}
-          {{#link-to 'user.register' tagName="li" href=false}}
-            <a {{bind-attr href="view.href"}}>
-              Register
-            </a>
-          {{/link-to}}
-        {{/if}}
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-fluid -->
+<nav id="mobileMenu">
+    <ul>
+      {{#link-to 'candidates' tagName="li" href=false}}
+        <a {{bind-attr href="view.href"}}>
+          <i class="glyphicon glyphicon-user" aria-hidden="true"> </i>
+            The Candidates
+          </a>
+      {{/link-to}}
+      {{#link-to 'questions.index' tagName="li" href=false}}
+        <a {{bind-attr href="view.href"}}>
+          <i class="glyphicon glyphicon-comment" aria-hidden="true"> </i>
+            Ask Watson
+          </a>
+      {{/link-to}}
+      {{#link-to 'insights' tagName="li" href=false}}
+        <a {{bind-attr href="view.href"}}>
+          <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> </i>
+            Personality Insights
+          </a>
+      {{/link-to}}
+      {{#link-to 'about' tagName="li" href=false}}
+        <a {{bind-attr href="view.href"}}>
+          <i class="glyphicon glyphicon-info-sign" aria-hidden="true"> </i>
+            About
+          </a>
+      {{/link-to}}
+    </ul>
 </nav>
+<header role="banner" class="navbar navbar-fixed-top navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <h1 id="mobileMenuButton" style="margin-top: 5px;" class="glyphicon glyphicon-th-list pull-left btn visible-xs" aria-hidden="true" {{action 'toggleMobileMenu'}}>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </h1>
+          {{#link-to 'index' tag='h1' classNames="logo-text pull-left btn"}}
+          <img alt="Electing The President" src="/flagman.png" class="img-responsive pull-left"> <span class="text-danger">E</span><span style="color: white">T</span><span class="text-info">P</span>
+        {{/link-to}}
+        </div>
+        <div class="navbar-default side-collapse hidden-xs">
+          <nav role="navigation" class="navbar-collapse">
+            <ul class="nav navbar-nav">
+              {{#link-to 'candidates' tagName="li" href=false}}
+                <a {{bind-attr href="view.href"}}>
+                  <span class="glyphicon glyphicon-user" aria-hidden="true"> </span>
+                    The Candidates
+                  </a>
+              {{/link-to}}
+              {{#link-to 'questions.index' tagName="li" href=false}}
+                <a {{bind-attr href="view.href"}}>
+                  <span class="glyphicon glyphicon-comment" aria-hidden="true"> </span>
+                    Ask Watson
+                  </a>
+              {{/link-to}}
+              {{#link-to 'insights' tagName="li" href=false}}
+                <a {{bind-attr href="view.href"}}>
+                  <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> </span>
+                    Personality Insights
+                  </a>
+              {{/link-to}}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              {{#link-to 'about' tagName="li" href=false}}
+                <a {{bind-attr href="view.href"}}>
+                  <span class="glyphicon glyphicon-info-sign" aria-hidden="true"> </span>
+                    About
+                  </a>
+              {{/link-to}}
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden">
+              {{#if session.isAuthenticated}}
+                {{#link-to 'users.index' tagName="li" href=false}}
+                  <a {{bind-attr href="view.href"}}>
+                    Users
+                  </a>
+                {{/link-to}}
+                {{#link-to 'admin.models.index' tagName="li" href=false}}
+                  <a {{bind-attr href="view.href"}}>
+                    Models
+                  </a>
+                {{/link-to}}
+                <li><a {{action 'invalidateSession'}}>Logout</a></li>
+              {{else}}
+                {{#link-to 'login' tagName="li" href=false}}
+                  <a {{bind-attr href="view.href"}}>
+                    Login
+                  </a>
+                {{/link-to}}
+                {{#link-to 'user.register' tagName="li" href=false}}
+                  <a {{bind-attr href="view.href"}}>
+                    Register
+                  </a>
+                {{/link-to}}
+              {{/if}}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 <div class="container">
 {{outlet}}
 </div>

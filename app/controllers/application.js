@@ -3,6 +3,23 @@ import ENV from 'electing-the-president/config/environment';
 
 export default Ember.Controller.extend({
   session: Ember.inject.service('session'),
+  toggleMobileMenu: function() {
+    if (!Ember.$("#mobileMenu").hasClass("mm-opened")) {
+      console.log('Opening menu');
+      Ember.$("body").addClass('mobileMenuOut');
+      Ember.$("#mobileMenu").data("mmenu").open();
+    } else {
+      console.log('Closing menu');
+      Ember.$("body").removeClass('mobileMenuOut');
+      Ember.$("#mobileMenu").data("mmenu").close();
+    }
+  },
+  openMobileMenu: function() {
+    Ember.$("#mobileMenu").data("mmenu").open();
+  },
+  closeMobileMenu: function() {
+    Ember.$("#mobileMenu").data("mmenu").close();
+  },
   thinking: false,
   scrollChat: function() {
     var height = 0;
@@ -14,11 +31,11 @@ export default Ember.Controller.extend({
       scrollTop: height
     });
   },
-  showChat: function(){
+  showChat: function() {
     Ember.$('#collapseChat').collapse('show');
     this.scrollChat();
   },
-  toggleChat: function(){
+  toggleChat: function() {
     Ember.$('#collapseChat').collapse('toggle');
     this.scrollChat();
   },
@@ -72,10 +89,10 @@ export default Ember.Controller.extend({
           //var bodyRegex = /.*<\/h1>(.*$)*/im;
           var answer, matches;
           var i = 0;
-          while(i < s.question.answers.length && s.question.answers[i].text === '${noAnswer}'){
+          while (i < s.question.answers.length && s.question.answers[i].text === '${noAnswer}') {
             ++i;
           }
-          if(i >= s.question.answers.length || s.question.answers[i].text === '${noAnswer}'){
+          if (i >= s.question.answers.length || s.question.answers[i].text === '${noAnswer}') {
             _this.watsonSay('Sorry, I don\'t know the answer.');
           } else {
             answer = s.question.answers[i];
@@ -91,7 +108,7 @@ export default Ember.Controller.extend({
               answer.heading = 'Answer';
               answer.body = answer.formattedText;
             }
-            if(i > 0) {
+            if (i > 0) {
               answer.body = '<p>I\'m not certain, but here goes nothing:</p>' + answer.body;
             }
             _this.watsonSay(answer.body);
@@ -106,17 +123,20 @@ export default Ember.Controller.extend({
     }
   },
   actions: {
+    toggleMobileMenu: function() {
+      this.get('toggleMobileMenu')();
+    },
     invalidateSession() {
-        this.get('session').invalidate();
-      },
-      askWatson: function(question) {
-        if (!question) {
-          question = this.get('question');
-        }
-        if(!question || question === '') {
-          return;
-        }
-        Ember.$('#qa-chatbox').append(`<li class="left clearfix">
+      this.get('session').invalidate();
+    },
+    askWatson: function(question) {
+      if (!question) {
+        question = this.get('question');
+      }
+      if (!question || question === '') {
+        return;
+      }
+      Ember.$('#qa-chatbox').append(`<li class="left clearfix">
         <span class="chat-img pull-left">
           <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
         </span>
@@ -131,14 +151,14 @@ export default Ember.Controller.extend({
           </p>
         </div>
       </li>`);
-        this.showChat();
-        this.submitQuestion(question);
-      },
-      showChat: function(){
-        this.showChat();
-      },
-      toggleChat: function(){
-this.toggleChat();
-      }
+      this.showChat();
+      this.submitQuestion(question);
+    },
+    showChat: function() {
+      this.showChat();
+    },
+    toggleChat: function() {
+      this.toggleChat();
+    }
   }
 });

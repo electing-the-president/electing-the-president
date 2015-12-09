@@ -1,17 +1,33 @@
 @import "./_variables.scss";
 @import "bootstrap";
 @import "./_bootswatch.scss";
+@import "./mmenu.scss";
+
 
 body {
   padding-top: 45px;
   margin-bottom: 60px;
 }
+
+body.mobileMenuOut {
+  padding-top: 0;
+}
+
+.logo-text {
+  margin-top: 5px; padding-left: 5px;
+}
+
 @media (min-width: 979px) {
   .col-centered{
       float: none;
       margin: auto auto;
       text-align: center;
   }
+}
+
+#mobileMenuButton {
+  color:  lighten( #008CBA, 10% );
+  //position: relative;
 }
 
 .center-center {
